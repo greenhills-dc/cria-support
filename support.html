@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIA サポート</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f5f5f7;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        header h1 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        header p {
+            color: #86868b;
+            font-size: 1.1em;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .card h2 {
+            font-size: 1.3em;
+            margin-bottom: 16px;
+            color: #1d1d1f;
+        }
+        .card p, .card li {
+            color: #515154;
+            margin-bottom: 8px;
+        }
+        .card ul {
+            padding-left: 20px;
+        }
+        .card ul li {
+            margin-bottom: 6px;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e5e5e7;
+            padding: 16px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-item h3 {
+            font-size: 1em;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+        }
+        .faq-item p {
+            color: #86868b;
+            font-size: 0.95em;
+        }
+        .contact-info {
+            text-align: center;
+            padding: 24px;
+        }
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            color: #86868b;
+            font-size: 0.85em;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e5e7;
+        }
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CRIA</h1>
+            <p>う蝕リスク入力支援アプリ</p>
+        </header>
+
+        <div class="card">
+            <h2>アプリについて</h2>
+            <p>CRIA（Caries Risk Input Assistant）は、う蝕リスク評価に関する入力および記録を支援するためのiOS / macOSアプリケーションです。評価項目の入力からCSVエクスポートまで、完全オフラインで動作します。</p>
+            <br>
+            <p><span class="badge">完全オフライン</span> インターネット接続不要。患者データが外部に送信されることはありません。</p>
+        </div>
+
+        <div class="card">
+            <h2>動作環境</h2>
+            <ul>
+                <li>iOS 17.0 以降（iPhone / iPad）</li>
+                <li>macOS（Mac Catalyst 対応）</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>よくある質問</h2>
+            <div class="faq-item">
+                <h3>Q. 患者データはどこに保存されますか？</h3>
+                <p>すべてのデータはご利用の端末内にのみ保存されます。クラウドやサーバーへのアップロードは一切行いません。アプリは完全にオフラインで動作します。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. 患者IDはそのまま出力されますか？</h3>
+                <p>いいえ。CSVエクスポート時に患者IDはハッシュ化されます。個人を直接特定できる情報は出力されません。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. iOS端末とMacの間でデータを共有できますか？</h3>
+                <p>患者データの端末間同期機能はありません（各端末で独立）。医院共通の設定については、設定ファイルのエクスポート/インポート機能を使ってAirDropやUSBで共有できます。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. 複数のiOS端末で医院設定を共有するには？</h3>
+                <p>設定画面の「医院共通設定」から、QRコードを使って他のiOS端末に設定を共有できます。iOS↔Mac間は設定ファイルのエクスポート/インポートをご利用ください。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. CSVエクスポートで期間を指定できますか？</h3>
+                <p>はい。エクスポート時に期間を指定して、特定の日付範囲のデータのみを書き出すことができます。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. このアプリは医療機器ですか？</h3>
+                <p>いいえ。本アプリは医療従事者による評価・記録支援を目的としたツールであり、診断・治療・予後判定を行う医療機器ではありません。臨床判断は必ず資格を持つ医療従事者が行ってください。</p>
+            </div>
+        </div>
+
+        <div class="card contact-info">
+            <h2>お問い合わせ</h2>
+            <p>ご不明な点やご要望がありましたら、お気軽にご連絡ください。</p>
+            <br>
+            <p><a href="mailto:support@greenhills-dc.org">support@greenhills-dc.org</a></p>
+        </div>
+
+        <footer>
+            <p>Copyright &copy; 2026 CRIA開発チーム. All rights reserved.</p>
+            <p><a href="./privacy.html">プライバシーポリシー</a></p>
+        </footer>
+    </div>
+</body>
+</html>
